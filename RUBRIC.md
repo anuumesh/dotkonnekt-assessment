@@ -199,7 +199,3 @@ After we review your submission, you'll receive:
  Generic, templated responses  
  Loom without camera or screen share  
  Weak escalation strategy (not addressing hallucinations)  
-
----
-
-Good luck! We're rooting for you. 
