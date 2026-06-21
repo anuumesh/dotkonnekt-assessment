@@ -266,5 +266,3 @@ See the templates in `/resources/templates/` for detailed guidance on each secti
 **Remember:** Quality of thinking > Depth of detail. Be concise, be clear, show your reasoning.
 
 ---
-
-*Good luck! We look forward to seeing your approach.*
