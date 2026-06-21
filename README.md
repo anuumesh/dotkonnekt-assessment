@@ -1,11 +1,10 @@
-# 🚀 Delivery Head - Role Assessment
+#   Delivery Head - Role Assessment
 
 **DotKonnekt** | hr@dotkonnekt.com | www.dotkonnekt.com  
-*© 2026 DotKonnekt · Confidential*
 
 ---
 
-## 📋 The Role
+##  The Role
 
 ### What You Will Own
 
@@ -15,18 +14,18 @@ As a **Delivery Head at DotKonnekt**, you will own:
 - AI use cases embedded in client systems and operations
 
 This assessment evaluates your thinking across:
-- ✅ Enterprise AI solution design
-- ✅ Architecture and systems thinking
-- ✅ Delivery leadership at scale
-- ✅ Engineering team management
-- ✅ Executive client communication
-- ✅ Tradeoff analysis and decision-making
-- ✅ Production-grade mindset
-- ✅ Practical, hands-on implementation instinct
+-  Enterprise AI solution design
+-  Architecture and systems thinking
+-  Delivery leadership at scale
+-  Engineering team management
+-  Executive client communication
+-  Tradeoff analysis and decision-making
+-  Production-grade mindset
+-  Practical, hands-on implementation instinct
 
 ---
 
-## 🎯 Scenario
+##  Scenario
 
 ### Enterprise AI Deployment — $500M Retail Client
 
@@ -36,21 +35,21 @@ A **$500M retail enterprise** wants to deploy an AI-powered **Customer Support &
 
 ---
 
-## 📊 Business Requirements
+##  Business Requirements
 
 The solution must:
 
-- 💬 **Answer customer questions** from product catalogs, policies, FAQs, and manuals
-- 🛍️ **Recommend products** based on customer intent and browsing context
-- 🔗 **Integrate natively** with Shopify, Salesforce, and Zendesk
-- ⚡ **Support 500,000+ monthly active users** with low-latency responses
-- 🔒 **Meet enterprise security, data governance, and compliance** requirements
-- 🔄 **Architect for extensibility** — returns, order tracking, and refunds are next
-- ☁️ **Deploy on AWS or GCP**
+-  **Answer customer questions** from product catalogs, policies, FAQs, and manuals
+-  **Recommend products** based on customer intent and browsing context
+-  **Integrate natively** with Shopify, Salesforce, and Zendesk
+-  **Support 500,000+ monthly active users** with low-latency responses
+-  **Meet enterprise security, data governance, and compliance** requirements
+-  **Architect for extensibility** — returns, order tracking, and refunds are next
+-  **Deploy on AWS or GCP**
 
 ---
 
-## 📦 Deliverables (4 Areas)
+##  Deliverables (4 Areas)
 
 ### 01 Solution Proposal — **30%**
 
@@ -100,7 +99,7 @@ You are leading the team starting today. Describe:
 
 ---
 
-## 🎓 Evaluation Criteria
+##  Evaluation Criteria
 
 ### How We Score
 
@@ -113,15 +112,15 @@ You are leading the team starting today. Describe:
 
 ---
 
-## 💡 What We're Looking For
+##  What We're Looking For
 
 > **We are less interested in a "perfect" answer and more interested in how you make decisions, communicate tradeoffs, and think about delivering enterprise-scale AI.**
 
-✨ **Bring your point of view. We will push back on it.**
+ **Bring your point of view. We will push back on it.**
 
 ---
 
-## 🤝 How to Submit
+##  How to Submit
 
 1. **Prepare your deliverables** for the 4 areas above
 2. **Create a folder** in this repository with your name (e.g., `/submissions/john-doe/`)
@@ -164,7 +163,7 @@ dotkonnekt-assessment/
 
 ---
 
-## ❓ FAQ
+##  FAQ
 
 **Q: Can I use AI tools to help prepare this?**  
 A: You can use tools to help organize and structure your thinking, but the core analysis, decisions, and recommendations must be yours.
@@ -180,7 +179,7 @@ A: Individual submissions are preferred for assessment purposes. However, you ca
 
 ---
 
-## 📞 Contact
+##  Contact
 
 **Questions?** Reach out to:  
 📧 **hr@dotkonnekt.com**  
@@ -188,8 +187,7 @@ A: Individual submissions are preferred for assessment purposes. However, you ca
 
 ---
 
-**Good luck! 🚀**
+**Good luck! **
 
 ---
 
-*Last updated: June 19, 2026*
