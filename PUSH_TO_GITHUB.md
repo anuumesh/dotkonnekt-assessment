@@ -1,4 +1,4 @@
-# 📚 How to Push This to GitHub
+#   How to Push This to GitHub
 
 ## Quick Setup (Follow These Steps)
 
@@ -44,7 +44,7 @@ git push -u origin main
 
 ### Step 3: Verify It's Live
 - Go to **https://github.com/anuumesh/dotkonnekt-assessment**
-- You should see all files there ✅
+- You should see all files there 
 
 ---
 
@@ -89,6 +89,7 @@ When someone wants to submit their assessment:
    - `02-delivery-plan.md`
    - `03-engineering-leadership.md`
    - `04-presentation-link.md`
+     
 4. **Submit a Pull Request** with their work
 
 ---
@@ -103,4 +104,4 @@ After pushing, files will be at:
 
 ---
 
-**Ready? Run those commands in your terminal! 🚀**
+**Ready? Run those commands in your terminal! **
