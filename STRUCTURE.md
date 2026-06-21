@@ -90,7 +90,3 @@ https://github.com/anuumesh/dotkonnekt-assessment
 ```
 
 Others can fork/clone and submit their responses via Pull Requests! 
-
----
-
-**All set! Everything is ready to go. **
