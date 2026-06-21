@@ -1,9 +1,5 @@
 # Engineering Leadership & Execution Template
 
-## Instructions
-Use this template to describe how you'll lead the engineering team. Replace bracketed sections with your detailed response. Aim for 3-4 pages.
-
----
 
 ## 1. Team Structure & Onboarding
 
@@ -151,25 +147,25 @@ Deploy to production (canary/progressive)
 ### Deployment Process
 
 #### Pre-Deployment Checklist
-- ✅ All tests passing
-- ✅ Code reviewed and approved
-- ✅ Runbooks updated
-- ✅ On-call engineer ready
-- ✅ Rollback procedure verified
-- ✅ Customer comms ready (if needed)
+-    All tests passing
+-    Code reviewed and approved
+-    Runbooks updated
+-    On-call engineer ready
+-    Rollback procedure verified
+-    Customer comms ready (if needed)
 
 #### Deployment Execution
 ```
 Phase 1: Canary (5% traffic)
   - Monitor for 15 minutes
-  - Check error rate, latency, critical logs
+  - Check error rate, latency, and critical logs
   - If any issues → Rollback immediately
   - If healthy → Proceed
 
 Phase 2: Progressive Rollout (25% → 50% → 75% → 100%)
   - Each phase: 15-30 minutes observation
   - Metrics dashboard watched in real-time
-  - Quick rollback if issues detected
+  - Quick rollback if issues are detected
 
 Phase 3: Monitor (1-2 hours post-deployment)
   - Continuous monitoring of all metrics
@@ -178,7 +174,7 @@ Phase 3: Monitor (1-2 hours post-deployment)
 
 #### Rollback Procedure
 - **Trigger:** Error rate > 5% OR latency p95 > 5s OR critical errors
-- **Process:** `kubectl rollout undo` or re-deploy previous version
+- **Process:** `kubectl rollout undo` or re-deploy the previous version
 - **Verification:** Metrics return to normal
 - **Communication:** Notify stakeholders
 - **Post-incident:** RCA within 24 hours
@@ -208,6 +204,7 @@ Phase 3: Monitor (1-2 hours post-deployment)
 ```
 
 **Target coverage:**
+
 - Unit tests: >80% code coverage
 - Integration tests: All integrations covered
 - E2E tests: Critical user journeys (3-5 scenarios)
@@ -215,6 +212,7 @@ Phase 3: Monitor (1-2 hours post-deployment)
 ### Test Ownership
 
 | Test Type | Owner | Examples |
+
 |-----------|-------|----------|
 | **Unit** | Developer writing code | LLM response parsing, data validation |
 | **Integration** | Developer + DevOps | Shopify API calls, Zendesk escalation |
@@ -275,7 +273,7 @@ Phase 3: Monitor (1-2 hours post-deployment)
 
 #### Logging Strategy
 - **Application logs:** Structured JSON to centralized log store
-- **Access logs:** All API requests with latency, user, status
+- **Access logs:** All API requests with latency, user, and status
 - **Audit logs:** All data access for compliance
 - **Retention:** 30 days hot, 1 year archive
 
@@ -311,7 +309,7 @@ Phase 3: Monitor (1-2 hours post-deployment)
 
 #### Code Quality Improvements
 - **Technical debt tracking:** JIRA label for tech debt
-- **Sprint allocation:** 20% of sprint for tech debt/refactoring
+- **Sprint allocation:** 20% of the sprint for tech debt/refactoring
 - **Performance optimization:** Quarterly perf improvement sprints
 - **Security hardening:** Monthly security review & updates
 
@@ -390,11 +388,11 @@ Phase 3: Monitor (1-2 hours post-deployment)
 
 #### Scenario 4: Two Engineers Disagree on Architecture
 - **Your approach:** [Facilitate debate, ensure both perspectives heard]
-- **Decision:** [Make decision quickly, document rationale, support winner]
+- **Decision:** [Make decision quickly, document the rationale, support winner]
 - **Resolution:** [Loser commits fully; revisit if assumption changes]
 
 ---
 
 ## Conclusion
 
-[Summarize your leadership approach and how it will deliver success for this team and project.]
+With this process,I will be able to handle the engineering team.
