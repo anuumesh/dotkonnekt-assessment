@@ -108,24 +108,24 @@ Deploy an AI-powered **Customer Support & Product Discovery Assistant** that:
 ## What Success Looks Like
 
 ### Phase 1 (MVP - 4 months)
-✅ 80% of support queries handled without escalation  
-✅ Product recommendation engine live  
-✅ Shopify + Zendesk integration working  
-✅ <2 second response times  
-✅ Zero security incidents  
+: 80% of support queries handled without escalation  
+: Product recommendation engine live  
+: Shopify + Zendesk integration working  
+: <2 second response times  
+: Zero security incidents  
 
 ### Phase 2 (Production Scale - 2 months)
-✅ 95% query resolution  
-✅ Salesforce integration complete  
-✅ 500K MAU supported reliably  
-✅ Comprehensive monitoring & alerting  
-✅ Team trained & operationally ready  
+: 95% query resolution  
+: Salesforce integration complete  
+: 500K MAU supported reliably  
+: Comprehensive monitoring & alerting  
+: Team trained & operationally ready  
 
 ### Phase 3 (Optimization - Ongoing)
-✅ Continuous improvement on accuracy  
-✅ New features (returns, order tracking)  
-✅ Cost optimization initiatives  
-✅ Proactive incident prevention  
+: Continuous improvement on accuracy  
+:  New features (returns, order tracking)  
+:  Cost optimization initiatives  
+:  Proactive incident prevention  
 
 ---
 
@@ -178,6 +178,7 @@ As Delivery Head, you'll make critical tradeoffs:
 ## Success Metrics
 
 ### Technical Metrics
+
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | Query Resolution Rate | 95% | % queries resolved without escalation |
@@ -187,6 +188,7 @@ As Delivery Head, you'll make critical tradeoffs:
 | Accuracy | 95% | Human review of sample outputs |
 
 ### Business Metrics
+
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | Support Ticket Volume Reduction | 80% | % fewer human-handled tickets |
@@ -196,6 +198,7 @@ As Delivery Head, you'll make critical tradeoffs:
 | Revenue Impact | +15% | Conversion lift from recommendations |
 
 ### Team Metrics
+
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | Team Ramp-up Time | 2 weeks | Time to productive contributor |
@@ -217,10 +220,10 @@ As Delivery Head, you'll make critical tradeoffs:
 
 ### We Don't Care About
 
-- ❌ Overly complex architectures for the sake of complexity
-- ❌ Academic theory without practical grounding
-- ❌ Cookie-cutter solutions without client context
-- ❌ Unrealistic timelines or budgets
+-  Overly complex architectures for the sake of complexity
+-  Academic theory without practical grounding
+-  Cookie-cutter solutions without client context
+-  Unrealistic timelines or budgets
 
 ---
 
