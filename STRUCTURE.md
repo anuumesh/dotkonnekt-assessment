@@ -1,4 +1,4 @@
-# 📋 Complete File Structure Created
+#  Complete File Structure Created
 
 Here's everything that's been created for you:
 
@@ -51,17 +51,17 @@ Here's everything that's been created for you:
 
 ---
 
-## 🎯 What You Have Now
+##  What You Have Now
 
-✅ **Comprehensive Assessment Guide** - Human-readable, well-structured  
-✅ **Ready-to-Share with Others** - Everything is public-ready  
-✅ **Detailed Templates** - 3 full submission templates with guidance  
-✅ **Evaluation Rubric** - Clear scoring criteria (30-30-30-10)  
-✅ **Instructions** - Step-by-step guide to push to GitHub  
+ **Comprehensive Assessment Guide** - Human-readable, well-structured  
+ **Ready-to-Share with Others** - Everything is public-ready  
+ **Detailed Templates** - 3 full submission templates with guidance  
+ **Evaluation Rubric** - Clear scoring criteria (30-30-30-10)  
+ **Instructions** - Step-by-step guide to push to GitHub  
 
 ---
 
-## 🚀 Next: Push to GitHub
+##  Next: Push to GitHub
 
 ### Run These Commands:
 
@@ -82,7 +82,7 @@ Then create the repo at: **https://github.com/new**
 
 ---
 
-## 📢 Share Your Assessment
+## Share Your Assessment
 
 Once on GitHub, share:
 ```
@@ -93,4 +93,4 @@ Others can fork/clone and submit their responses via Pull Requests!
 
 ---
 
-**All set! Everything is ready to go. 🎉**
+**All set! Everything is ready to go. **
