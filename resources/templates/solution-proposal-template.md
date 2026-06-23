@@ -1,7 +1,3 @@
-# 01 - Solution Proposal Guide
-
-This guide explains what the solution proposal should include. Candidates may use this structure directly or adapt it, but the final response should cover every section below.
-
 ## 1. Executive Summary
 
 Start with a short summary of the recommended direction.
