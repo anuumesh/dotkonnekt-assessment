@@ -1,201 +1,111 @@
 # Evaluation Rubric
 
-## How Your Response Will Be Scored
+We score the assessment across four areas. The best responses are clear, practical, and opinionated. They do not need to be long, but they should show real delivery judgment.
 
----
+## Scoring Summary
 
-## Scoring Breakdown
+| Category | Weight |
+| --- | ---: |
+| Solution Design and Tradeoffs | 30% |
+| Delivery Strategy | 30% |
+| Engineering Leadership and Execution | 30% |
+| Executive Communication | 10% |
 
-### 1. Solution Design & Tradeoffs (30%)
+## 1. Solution Design and Tradeoffs
 
-#### Excellent (27-30 points)
--  Architecture is well-reasoned, modern, and appropriate for scale
--  Clear technology decisions with strong rationale
--  Tradeoffs are explicitly identified and explained
--  Design handles edge cases and failure modes
--  Security and scalability baked into architecture, not added later
+Excellent responses:
 
-#### Good (21-26 points)
--  Architecture is solid and mostly appropriate
--  Technology choices are reasonable with some rationale
--  Some tradeoffs identified, but could be deeper
--  Addresses main requirements well
--  Security and scalability considered
+- Present an architecture that fits the scale, risk, and business context
+- Explain the AI approach clearly, especially grounding, retrieval, and escalation
+- Show how Shopify, Salesforce, and Zendesk fit into the system
+- Include security, privacy, observability, and governance in the core design
+- Discuss alternatives and explain why the selected path is appropriate
+- Identify likely failure modes and design around them
 
-#### Adequate (15-20 points)
--  Architecture is functional but may have gaps
--  Technology choices lack clear reasoning
--  Limited tradeoff analysis
--  Addresses core requirements
--  Security or scalability gaps
+Weaker responses usually:
 
-#### Below Expectations (<15 points)
--  Architecture is unclear or inappropriate for the scale
--  Technology choices seem arbitrary
--  No apparent tradeoff analysis
--  Missing critical requirements
+- Rely on buzzwords without explaining system behavior
+- Ignore latency, cost, data freshness, or operational complexity
+- Treat security and compliance as afterthoughts
+- Assume the model will be accurate without describing controls
 
----
+## 2. Delivery Strategy
 
-### 2. Delivery Strategy (30%)
+Excellent responses:
 
-#### Excellent (27-30 points)
--  Discovery phase is thorough and validates key assumptions early
--  MVP scope is realistically defined and sequenced
--  Rollout plan is detailed with clear success criteria
--  Risks are identified proactively with strong mitigations
--  Timeline is aggressive but achievable; demonstrates planning rigor
+- Start with a strong discovery phase that validates data, integrations, users, and risk
+- Define a focused MVP with a clear reason for what is in and out
+- Sequence work in a way that reduces uncertainty early
+- Include a credible rollout plan with pilot, canary, rollback, and go-live criteria
+- Show realistic timelines, dependencies, and decision points
+- Assign ownership for risks instead of simply listing them
 
-#### Good (21-26 points)
--  Discovery phase is solid with validation steps
--  MVP scope is reasonable
--  Rollout plan is sensible
--  Main risks identified with mitigation plans
--  Timeline seems realistic
+Weaker responses usually:
 
-#### Adequate (15-20 points)
--  Discovery phase exists but could be more thorough
--  MVP scope is defined but may miss some nuance
--  Rollout plan is basic
--  Some risks identified
--  Timeline may be optimistic
+- Jump straight into implementation
+- Propose an MVP that is too large or too vague
+- Give optimistic timelines without explaining assumptions
+- Miss integration risk or client dependency management
 
-#### Below Expectations (<15 points)
--  Weak discovery phase or skipped entirely
--  MVP scope is unclear or unrealistic
--  Rollout plan is vague
--  Risks not well considered
+## 3. Engineering Leadership and Execution
 
----
+Excellent responses:
 
-### 3. Engineering Leadership (30%)
+- Define a team structure that matches the work
+- Explain how people will onboard and become productive
+- Set clear engineering standards without creating unnecessary process
+- Include testing, review, deployment, and incident practices
+- Show how quality is protected under delivery pressure
+- Demonstrate how the Delivery Head makes decisions and handles conflict
 
-#### Excellent (27-30 points)
--  Team structure is clear, roles well-defined
--  Onboarding plan is detailed and practical
--  Engineering practices establish high quality bar without being bureaucratic
--  CI/CD pipeline is well-designed; deployment process is low-risk
--  Monitoring and testing strategy is comprehensive
--  Clear leadership philosophy; demonstrates how you'd handle challenges
+Weaker responses usually:
 
-#### Good (21-26 points)
--  Team structure is sensible
--  Onboarding plan is solid
--  Engineering practices are sound
--  CI/CD approach is reasonable
--  Testing and monitoring considered
--  Leadership approach is clear
+- Describe ceremonies without explaining outcomes
+- Ignore team ramp-up and ownership
+- Skip testing strategy or operational readiness
+- Sound generic instead of grounded in this project
 
-#### Adequate (15-20 points)
--  Team structure exists but could be clearer
--  Onboarding basics covered
--  Engineering practices are present but may be generic
--  CI/CD mentioned but not detailed
--  Monitoring/testing/leadership could be more specific
+## 4. Executive Communication
 
-#### Below Expectations (<15 points)
--  Team structure is unclear
--  Limited detail on practices or approach
--  Doesn't demonstrate leadership instinct
--  Generic or prescriptive thinking
+Excellent presentations:
 
----
+- Explain the recommendation in plain language
+- Focus on business outcomes, tradeoffs, risks, and next steps
+- Use visuals effectively
+- Stay close to 15 minutes
+- Feel confident, concise, and prepared
 
-### 4. Executive Communication (10%)
+Weaker presentations usually:
 
-#### Excellent (9-10 points)
--  Loom is clear, professional, and concise
--  Complex ideas explained simply
--  Camera and screen share ON as requested
--  15 minutes of focused content
--  Confidence and presence evident; you'd inspire client confidence
+- Read the document line by line
+- Go too deep into implementation details for the audience
+- Avoid hard tradeoffs
+- Miss the requested camera or screen share
 
-#### Good (7-8 points)
--  Loom is clear and professional
--  Ideas are explained reasonably well
--  Both camera and screen share used
--  Close to 15 minutes
--  Solid communication
+## Overall Interpretation
 
-#### Adequate (5-6 points)
--  Loom is adequate but could be clearer
--  Some explanations unclear
--  Camera or screen share missing or low quality
--  Too short or too long
--  Communication is OK but lacks polish
+| Score | Interpretation |
+| ---: | --- |
+| 90-100 | Outstanding. Strong signal for senior delivery leadership. |
+| 80-89 | Very strong. Clear next-round candidate. |
+| 70-79 | Good. Worth continuing if experience also aligns. |
+| 60-69 | Mixed. Some useful thinking, but important gaps remain. |
+| Below 60 | Not yet at the expected level for this role. |
 
-#### Below Expectations (<5 points)
--  Loom is hard to understand
--  Major explanation gaps
--  Camera or screen share problems
--  Far from 15 minutes
--  Not confident or clear
+## What We Value Most
 
----
+- Clear judgment
+- Practical sequencing
+- Honest tradeoffs
+- Strong communication
+- Awareness of people, process, and production realities
 
-## Overall Scoring Guide
+## Common Mistakes
 
-### Total Score Interpretation
-
-| Score | Assessment | Likely Outcome |
-|-------|-----------|-----------------|
-| 90-100 | **Outstanding** | Strong hire consideration |
-| 80-89 | **Very Good** | Serious consideration; likely phone screen |
-| 70-79 | **Good** | Solid consideration; phone screen likely |
-| 60-69 | **Adequate** | Possible; depends on other factors |
-| <60 | **Below Expectations** | Unlikely to advance |
-
----
-
-## What We're NOT Scoring
-
- **Perfection** — We don't expect a perfect answer  
- **Compliance** — Following a template exactly  
- **Volume** — Length of the response  
- **Buzzwords** — Use of trendy terms without substance  
- **Fluff** — Padding or unnecessary content  
-
----
-
-## What We ARE Scoring
-
- **Thinking** — How you approach problems  
- **Judgment** — What decisions you make and why  
- **Realism** — Can this plan actually work?  
- **Communication** — Can you articulate your ideas clearly?  
- **Execution Instinct** — Would we trust you to run this?  
-
----
-
-## Feedback Process
-
-After we review your submission, you'll receive:
--  Scores in each category
--  Brief feedback on strengths
--  Areas for improvement
--  Next steps (if any)
-
----
-
-## Tips for Success
-
-1. **Show your reasoning** — Explain WHY, not just WHAT
-2. **Be honest about tradeoffs** — No perfect solutions exist
-3. **Think practically** — How would this actually work on day 1?
-4. **Bring your point of view** — We want your perspective, not a generic answer
-5. **Communicate clearly** — Assume reader has limited context
-6. **Be specific** — Use examples, not abstract concepts
-7. **Think holistically** — Connect architecture, team, process, and communication
-
----
-
-## Common Mistakes (What NOT to Do)
-
- Overcomplicating the architecture  
- Ignoring team/people aspects  
- Unrealistic timelines  
- Not addressing integration complexity  
- Glossing over risks  
- Generic, templated responses  
- Loom without camera or screen share  
- Weak escalation strategy (not addressing hallucinations)  
+- Designing a complex system before validating the data
+- Assuming one LLM call solves the whole problem
+- Forgetting human escalation
+- Ignoring cost and latency
+- Treating integrations as simple API calls
+- Leaving monitoring, support, and rollback until the end
+- Submitting a generic AI architecture that could apply to any company

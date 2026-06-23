@@ -1,193 +1,84 @@
-#   Delivery Head - Role Assessment
+# DotKonnekt Delivery Head Assessment
 
-**DotKonnekt** | hr@dotkonnekt.com | www.dotkonnekt.com  
+This repository contains the complete take-home assessment for the Delivery Head role at DotKonnekt. It is ready to share with candidates as-is.
 
----
+The exercise is designed to evaluate how a candidate thinks through a real enterprise AI delivery problem: architecture, delivery sequencing, team leadership, risk management, and executive communication.
 
-##  The Role
+## Candidate Scenario
 
-### What You Will Own
+A $500M retail business wants to launch an AI-powered Customer Support and Product Discovery Assistant.
 
-As a **Delivery Head at DotKonnekt**, you will own:
-- Customer deliveries
-- Solutioning AI applications
-- AI use cases embedded in client systems and operations
+The assistant must answer customer questions, recommend products, integrate with existing enterprise systems, and scale to 500,000+ monthly active users. The Delivery Head is responsible for taking the engagement from discovery through production rollout.
 
-This assessment evaluates your thinking across:
--  Enterprise AI solution design
--  Architecture and systems thinking
--  Delivery leadership at scale
--  Engineering team management
--  Executive client communication
--  Tradeoff analysis and decision-making
--  Production-grade mindset
--  Practical, hands-on implementation instinct
+The client environment includes:
 
----
+- Shopify for commerce, product catalog, cart, and order context
+- Salesforce for customer profile, account, and relationship history
+- Zendesk for support tickets, escalation, and agent workflows
+- AWS or GCP as the preferred cloud platform
+- Enterprise requirements for security, privacy, governance, auditability, and operational support
 
-##  Scenario
+## Candidate Deliverables
 
-### Enterprise AI Deployment — $500M Retail Client
+Candidates should submit four files:
 
-A **$500M retail enterprise** wants to deploy an AI-powered **Customer Support & Product Discovery Assistant** at scale.
-
-**You are the Delivery Head.** This is yours to own — from architecture to go-live.
-
----
-
-##  Business Requirements
-
-The solution must:
-
--  **Answer customer questions** from product catalogs, policies, FAQs, and manuals
--  **Recommend products** based on customer intent and browsing context
--  **Integrate natively** with Shopify, Salesforce, and Zendesk
--  **Support 500,000+ monthly active users** with low-latency responses
--  **Meet enterprise security, data governance, and compliance** requirements
--  **Architect for extensibility** — returns, order tracking, and refunds are next
--  **Deploy on AWS or GCP**
-
----
-
-##  Deliverables (4 Areas)
-
-### 01 Solution Proposal — **30%**
-
-Prepare a comprehensive solution proposal including:
-
-- [ ] **Architecture diagram** covering AI, integration, and data layers
-- [ ] **Key technology decisions** and rationale
-- [ ] **Integration approach** for Shopify, Salesforce, and Zendesk
-- [ ] **Scalability design** for 500K+ users
-- [ ] **Security, governance, and compliance** considerations
-- [ ] **Key design tradeoffs** you made and why
-
----
-
-### 02 Delivery Plan — **30%**
-
-Create a detailed delivery plan covering discovery, MVP, and production rollout:
-
-- [ ] **Discovery phase** — what you would validate before writing a line of code
-- [ ] **MVP scope** — what ships first and why
-- [ ] **Production rollout approach** and criteria for go-live
-- [ ] **Team structure** and role breakdown
-- [ ] **Timeline** with key milestones
-- [ ] **Risks, dependencies,** and how you would manage them
-
----
-
-### 03 Engineering Leadership & Execution — **30%**
-
-You are leading the team starting today. Describe:
-
-- [ ] **How you would structure and onboard** the team
-- [ ] **Engineering practices, standards,** and ways of working
-- [ ] **Development and deployment approach** (branching, CI/CD, environments)
-- [ ] **Quality, testing strategy,** and operational readiness criteria
-
----
-
-### 04 Executive Presentation — **10%**
-
-- [ ] Record a **15-minute Loom** (or equivalent) with **camera ON** and **screen share ON**
-- [ ] Present your recommended solution to the **client executive team**:
-  - CTO
-  - VP of Customer Experience
-  - Director of Engineering
-- [ ] **Share the recording link** once complete
-
----
-
-##  Evaluation Criteria
-
-### How We Score
-
-| Criteria | Weight | Focus |
-|----------|--------|-------|
-| **Solution Design & Tradeoffs** | 30% | Depth of architectural thinking, quality of decisions, clarity of tradeoffs |
-| **Delivery Strategy** | 30% | Realism of the plan, risk awareness, sequencing, and team design |
-| **Engineering Leadership** | 30% | How you would run the team — practices, quality bar, and execution instinct |
-| **Executive Communication** | 10% | Clarity, confidence, and ability to communicate to a senior client audience |
-
----
-
-##  What We're Looking For
-
-> **We are less interested in a "perfect" answer and more interested in how you make decisions, communicate tradeoffs, and think about delivering enterprise-scale AI.**
-
- **Bring your point of view. We will push back on it.**
-
----
-
-##  How to Submit
-
-1. **Prepare your deliverables** for the 4 areas above
-2. **Create a folder** in this repository with your name (e.g., `/submissions/john-doe/`)
-3. **Upload:**
-   - `01-solution-proposal.md` (or PDF/document)
-   - `02-delivery-plan.md`
-   - `03-engineering-leadership.md`
-   - `04-presentation-link.md` (with Loom link)
-4. **Submit a Pull Request** with your materials
-5. **Include a brief note** about your approach in the PR description
-
----
-
-## 📁 Repository Structure
-
-```
-dotkonnekt-assessment/
-├── README.md                           # This file
-├── ASSESSMENT.md                       # Full assessment details
-├── RUBRIC.md                          # Detailed evaluation rubric
-├── submissions/
-│   ├── example-submission/
-│   │   ├── 01-solution-proposal.md
-│   │   ├── 02-delivery-plan.md
-│   │   ├── 03-engineering-leadership.md
-│   │   └── 04-presentation-link.md
-│   └── [your-name]/
-│       ├── 01-solution-proposal.md
-│       ├── 02-delivery-plan.md
-│       ├── 03-engineering-leadership.md
-│       └── 04-presentation-link.md
-└── resources/
-    ├── templates/
-    │   ├── solution-proposal-template.md
-    │   ├── delivery-plan-template.md
-    │   └── engineering-leadership-template.md
-    └── references/
-        └── architecture-examples.md
+```text
+submissions/candidate-name/
+  01-solution-proposal.md
+  02-delivery-plan.md
+  03-engineering-leadership.md
+  04-presentation-link.md
 ```
 
----
+The submission is scored across four areas:
 
-##  FAQ
+| Area | Weight | What reviewers evaluate |
+| --- | ---: | --- |
+| Solution Proposal | 30% | Architecture, AI/data approach, integrations, scale, security, governance, and tradeoffs |
+| Delivery Plan | 30% | Discovery plan, MVP scope, timeline, team model, rollout approach, dependencies, and risk management |
+| Engineering Leadership | 30% | Team structure, onboarding, engineering standards, CI/CD, testing, operations, and leadership judgment |
+| Executive Presentation | 10% | Clarity, confidence, senior-stakeholder communication, and ability to explain tradeoffs |
 
-**Q: Can I use AI tools to help prepare this?**  
-A: You can use tools to help organize and structure your thinking, but the core analysis, decisions, and recommendations must be yours.
+## What Good Looks Like
 
-**Q: What format should deliverables be in?**  
-A: Markdown, PDF, or Docs are all fine. Just ensure it's readable and professional.
+A strong response should:
 
-**Q: How long should each section be?**  
-A: Quality over quantity. Be concise but thorough — typically 2-5 pages per section.
+- Make clear assumptions instead of hiding unknowns
+- Explain why each major design decision was made
+- Show how the system avoids hallucinations and unsafe answers
+- Treat Shopify, Salesforce, and Zendesk as real enterprise integrations, not simple API calls
+- Include a rollout plan with pilot, go-live criteria, rollback, and operational readiness
+- Discuss cost, latency, data freshness, security, and governance
+- Show how the Delivery Head would lead people, not only design technology
+- Communicate clearly enough for both engineering and executive audiences
 
-**Q: Can I submit as an individual or team?**  
-A: Individual submissions are preferred for assessment purposes. However, you can collaborate during prep.
+## Files In This Repository
 
----
+| File | Purpose |
+| --- | --- |
+| `ASSESSMENT.md` | Full candidate brief |
+| `RUBRIC.md` | Reviewer scoring guide |
+| `STRUCTURE.md` | Repository and submission structure |
+| `resources/templates/solution-proposal-template.md` | Complete candidate guidance for solution design |
+| `resources/templates/delivery-plan-template.md` | Complete candidate guidance for planning and rollout |
+| `resources/templates/engineering-leadership-template.md` | Complete candidate guidance for leadership and execution |
+| `resources/examples/sample-submission-outline.md` | Example structure showing the expected depth and style |
+| `PUSH_TO_GITHUB.md` | Publishing checklist for repository owners |
 
-##  Contact
+## Presentation Requirement
 
-**Questions?** Reach out to:  
-📧 **hr@dotkonnekt.com**  
-🌐 **www.dotkonnekt.com**
+Candidates must record a 15-minute executive walkthrough with camera and screen share enabled. The audience should be treated as:
 
----
+- CTO
+- VP of Customer Experience
+- Director of Engineering
 
-**Good luck! **
+The presentation should summarize the recommended solution, the delivery approach, the main risks, and the decisions required from the client.
 
----
+## Use of AI Tools
 
+Candidates may use AI tools for outlining, research support, or language polishing. The final judgment, architecture choices, tradeoffs, and delivery recommendations must be their own. Candidates should be prepared to discuss and defend every major decision.
+
+## Contact
+
+Questions can be sent to `hr@dotkonnekt.com`.

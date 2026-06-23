@@ -1,197 +1,211 @@
-# Solution Proposal Template
+# 01 - Solution Proposal Guide
 
-## Instructions
-Use this template to structure your solution proposal. Replace the bracketed sections with your detailed response. Aim for 3-5 pages.
+This guide explains what the solution proposal should include. Candidates may use this structure directly or adapt it, but the final response should cover every section below.
 
----
+## 1. Executive Summary
 
-## 1. Architecture Overview
+Start with a short summary of the recommended direction.
 
-### High-Level Architecture Diagram
-[Describe or embed your architecture diagram here. Should show:
-- AI/LLM layer
-- Integration layer (Shopify, Salesforce, Zendesk)
-- Data layer (databases, vector stores, caches)
-- Client-facing components
-- External dependencies]
+A strong summary should include:
 
-**Key Components:**
-- **[Component Name]:** [Purpose and responsibility]
-- **[Component Name]:** [Purpose and responsibility]
+- The assistant should launch first as a website support and product discovery assistant, with human escalation through Zendesk.
+- The system should use retrieval-augmented generation so answers are grounded in the retailer's product catalog, policies, FAQs, and manuals.
+- Shopify should be treated as the near-real-time product and order context source.
+- Salesforce should provide customer context where authorized.
+- Zendesk should remain the operational fallback for complex, sensitive, or low-confidence cases.
+- The first release should prioritize reliable answers, safe escalation, observability, and measurable business impact over broad channel coverage.
 
----
+## 2. Recommended Architecture
 
-## 2. Technology Stack Decisions
+The architecture should include these layers:
 
-### AI/LLM Layer
-| Component | Choice | Rationale |
-|-----------|--------|-----------|
-| LLM Provider | [OpenAI/Anthropic/Azure/Other] | [Why this choice? Cost? Latency? Accuracy?] |
-| Model | [gpt-4/Claude/Other] | [Why? Capabilities needed? Cost implications?] |
-| RAG Framework | [LangChain/LlamaIndex/Custom] | [How will you ground responses in product data?] |
+| Layer | Responsibility |
+| --- | --- |
+| Customer channel | Website chat or embedded assistant where customers ask questions and receive product recommendations |
+| API/orchestration layer | Authenticates requests, manages sessions, calls retrieval and LLM services, applies business rules, and routes escalations |
+| AI layer | Uses an LLM with grounded prompts, retrieval context, guardrails, confidence checks, and response formatting |
+| Retrieval/data layer | Stores embeddings and searchable content from catalog, policies, FAQs, manuals, and selected CRM/support data |
+| Integration layer | Connects to Shopify, Salesforce, and Zendesk using APIs, webhooks, batch syncs, retries, and failure handling |
+| Operational layer | Provides logging, metrics, tracing, alerting, cost monitoring, audit trails, and incident response workflows |
 
-### Data & Knowledge Management
-- **Vector Database:** [Pinecone/Weaviate/Chroma/Other] — Why?
-- **Data Source:** [Real-time API/batch sync] — How frequently?
-- **Embeddings Model:** [OpenAI/Sentence Transformers/Other] — Why?
+The proposal should explain why each layer exists and how the layers interact.
 
-### Integration Layer
-- **Shopify Integration:** [REST API/GraphQL/Webhook] — Real-time or batch?
-- **Salesforce Integration:** [OAuth/API Keys/Middleware] — Data sync frequency?
-- **Zendesk Integration:** [Native app/API/Custom] — Escalation flow?
+## 3. AI and Data Strategy
 
-### Infrastructure
-- **Deployment:** [AWS SageMaker/Lambda/EC2] or [GCP Vertex AI/Cloud Run]
-- **Database:** [PostgreSQL/MongoDB/Other] for transactional data
-- **Caching:** [Redis/Memcached] for performance
-- **Monitoring:** [DataDog/New Relic/CloudWatch] — What metrics?
+Recommended approach:
 
----
+- Use RAG for grounding instead of relying only on model memory.
+- Keep source documents versioned so answers can be traced back to approved content.
+- Use structured retrieval for product facts such as price, availability, size, return eligibility, and policy details.
+- Use semantic retrieval for FAQs, manuals, buying guides, and troubleshooting content.
+- Use prompt templates with clear answer boundaries: if the system cannot find supporting evidence, it should say so or escalate.
+- Add confidence thresholds for escalation to Zendesk.
+- Capture feedback signals from customers and support agents to improve retrieval quality over time.
 
-## 3. Integration Approach
+The candidate should explain when fine-tuning might be useful. A reasonable answer is that fine-tuning is not required for MVP unless there is a clear style, classification, or routing need that RAG and prompting cannot satisfy.
 
-### Shopify Integration
-**What we need:**
-- Product catalog (SKU, description, price, inventory)
-- Customer browsing history & cart context
-- Real-time inventory updates
+## 4. Integration Approach
 
-**How:**
-- [Describe API approach, polling frequency, error handling]
-- Fallback strategy if Shopify is down?
-- Data freshness requirements?
+### Shopify
 
-### Salesforce Integration
-**What we need:**
-- Customer relationship history (past orders, interactions)
-- Customer segment/tier information
-- Relevant business rules
+Use Shopify for:
 
-**How:**
-- [Describe connection method, authentication]
-- Data sync cadence?
-- What if Salesforce is unavailable?
+- Product catalog
+- Inventory status
+- Pricing
+- Product metadata
+- Cart and browsing context where available
+- Order lookup for authenticated customers
 
-### Zendesk Integration
-**What we need:**
-- Create support tickets for escalations
-- Assign tickets to appropriate queue
-- Track customer satisfaction feedback
+Recommended pattern:
 
-**How:**
-- [Describe ticket creation flow]
-- Escalation rules and routing logic
-- Feedback loop for continuous improvement
+- Use webhooks for product and inventory changes.
+- Use scheduled sync for catalog backfills and search index refresh.
+- Use real-time API calls only where freshness is critical.
+- Cache high-read product data to reduce latency and API dependency.
 
----
+### Salesforce
 
-## 4. Scalability Design for 500K+ MAU
+Use Salesforce for:
 
-### Capacity Planning
-- **Estimated monthly queries:** [Your estimate based on 500K MAU]
-- **Peak QPS (queries per second):** [Your estimate]
-- **Seasonal spikes:** How much higher during peak seasons?
+- Customer segment
+- Account history
+- Loyalty tier
+- Recent interactions
+- Business rules for high-value customers
 
-### Scaling Strategy
+Recommended pattern:
 
-#### Horizontal Scaling
-- API tier: [How do you load balance requests?]
-- LLM inference: [How do you scale model serving? Batch processing? Real-time?]
-- Database: [Read replicas? Sharding strategy?]
+- Access Salesforce only for authenticated or authorized customer flows.
+- Minimize PII exposure in prompts and logs.
+- Use field-level permissions and audit logging.
+- Define fallback behavior when Salesforce is unavailable.
 
-#### Performance Optimization
-- **Caching:** What gets cached? TTL strategy?
-- **Model optimization:** Quantization? Distillation? Smaller models for simple queries?
-- **Query batching:** Where applicable to reduce latency?
+### Zendesk
 
-#### Monitoring & Alerting
-- **Key metrics:** Latency, throughput, error rate, cost per query
-- **Thresholds:** When do you scale up/down?
-- **Auto-scaling policies:** Based on what triggers?
+Use Zendesk for:
 
----
+- Human escalation
+- Ticket creation
+- Agent handoff
+- Resolution tracking
+- Feedback loop for failed or escalated answers
 
-## 5. Security, Governance & Compliance
+Recommended pattern:
 
-### Data Protection
-- **PII Handling:** How do you identify and protect PII in conversations?
-- **Encryption:** In transit (TLS 1.3+)? At rest (AES-256)?
-- **Data Retention:** How long do you keep conversation logs?
+- Create tickets with conversation summary, customer intent, retrieved sources, confidence score, and suggested category.
+- Escalate immediately for sensitive issues such as refunds, account access, legal complaints, payment failures, and low-confidence answers.
+- Feed ticket outcomes into reporting and future knowledge-base improvement.
 
-### Access Control
-- **Authentication:** How do users authenticate? MFA?
-- **Authorization:** Role-based access? What roles exist?
-- **Audit Logging:** What gets logged? Who can access logs?
+## 5. Scalability and Performance
 
-### Compliance & Governance
-- **GDPR:** Right to delete? Data portability?
-- **CCPA:** Opt-out mechanisms? Data transparency?
-- **SOC 2:** What controls are in place?
-- **AI Governance:** How do you prevent model misuse? Bias monitoring?
+Expected design targets:
 
-### Incident Response
-- **Security incidents:** Detection? Escalation? Communication plan?
-- **AI model failures:** How do you detect hallucinations? Rollback procedures?
-- **Compliance violations:** How do you respond?
+| Metric | Recommended target |
+| --- | ---: |
+| Monthly active users | 500,000+ |
+| p95 response latency for common questions | Under 2 seconds |
+| Availability | 99.9% |
+| Error rate | Under 0.1% for customer-facing API requests |
+| Initial automation target | 70-80% of common support questions |
+| Mature automation target | 90-95% after tuning and content improvement |
 
----
+Recommended scaling approach:
 
-## 6. Key Design Tradeoffs & Rationale
+- Horizontally scale stateless API services.
+- Cache common product and policy retrieval results.
+- Use a queue for non-interactive work such as indexing, feedback processing, and analytics.
+- Keep synchronous request paths small and observable.
+- Use rate limits per user/session/client to protect downstream systems.
+- Track LLM usage and cost per conversation.
+- Use smaller/faster models for classification and routing when appropriate.
 
-### Tradeoff #1: Real-time vs. Batch Processing
-**Choice:** [Real-time / Batch / Hybrid]  
-**Rationale:** [Why? What's the impact on latency, cost, complexity?]  
-**Risks:** [What could go wrong?]  
+## 6. Security, Privacy, and Governance
 
-### Tradeoff #2: Buy vs. Build
-**Choice:** [Pre-built LLM service / Self-hosted / Hybrid]  
-**Rationale:** [Speed vs. control vs. cost analysis]  
-**Risks:** [Vendor lock-in? Technical debt?]  
+The proposal should include:
 
-### Tradeoff #3: Fine-tuning vs. Prompt Engineering
-**Choice:** [Fine-tuned model / Prompt engineering / Both]  
-**Rationale:** [Cost, accuracy, time to value?]  
-**Risks:** [Model drift? Maintenance burden?]  
+- TLS for data in transit.
+- Encryption at rest for databases, logs, vector stores, and object storage.
+- Role-based access for admin and support tools.
+- PII minimization before sending data to model providers.
+- Audit logs for customer data access, prompt changes, and admin actions.
+- Data retention policy for conversations and derived analytics.
+- GDPR/CCPA support for delete and access requests.
+- Prompt and model version tracking.
+- Human approval process for major knowledge-base or policy changes.
+- Incident response plan for incorrect answers, data leakage, and system downtime.
 
-### Tradeoff #4: Escalation Threshold
-**Choice:** [Confidence threshold for human escalation]  
-**Rationale:** [Customer satisfaction vs. cost]  
-**Risks:** [Too aggressive = customer frustration; Too lenient = high cost]  
+## 7. Recommended Technology Choices
 
----
+The candidate may choose AWS or GCP. A strong answer explains the choice based on the client's existing cloud footprint.
 
-## 7. Known Constraints & Assumptions
+Example AWS-oriented stack:
 
-### Constraints
-- [Client's AWS/GCP requirement]
-- [Budget limitation]
-- [Timeline pressure]
-- [Team size limitation]
+| Area | Recommendation | Why |
+| --- | --- | --- |
+| Cloud | AWS | Mature enterprise controls, strong observability, common retail adoption |
+| Runtime | ECS/Fargate or EKS | Supports containerized services and horizontal scaling |
+| API layer | FastAPI, Node.js, or similar service framework | Simple API development and good integration ecosystem |
+| LLM | Managed LLM provider with enterprise data controls | Faster MVP, less operational burden than self-hosting |
+| Retrieval | OpenSearch, pgvector, Pinecone, or another managed vector store | Supports semantic retrieval and scalable search |
+| Database | PostgreSQL | Reliable transactional store for sessions, configuration, and audit metadata |
+| Cache | Redis/ElastiCache | Low-latency cache for frequent product and policy lookups |
+| Queue | SQS or Pub/Sub equivalent | Decouples indexing, analytics, and retryable integration work |
+| Observability | CloudWatch plus Datadog/New Relic if already used | Metrics, logs, traces, and alerting |
 
-### Assumptions
-- [LLM accuracy assumptions]
-- [Data availability from integrations]
-- [Customer willingness to use AI support]
+## 8. Key Tradeoffs
 
-### Risks If Assumptions Are Wrong
-- [What happens if LLM accuracy is worse than expected?]
-- [What if integration APIs are unreliable?]
+Strong proposals should cover at least these tradeoffs:
 
----
+### RAG vs Fine-Tuning
 
-## 8. Cost Estimation (Year 1)
+Recommended MVP decision: RAG first.
 
-| Component | Estimated Cost | Notes |
-|-----------|-----------------|-------|
-| LLM API (OpenAI/Claude) | $[X]/month | Based on [Y] queries/month at $[Z]/token |
-| Infrastructure (AWS/GCP) | $[X]/month | Compute, storage, networking |
-| Vector DB & Search | $[X]/month | [Pinecone/Weaviate/etc] |
-| Monitoring & Logging | $[X]/month | [DataDog/CloudWatch/etc] |
-| Team (partial FTE) | $[X] | [Y] engineers at [Z]% allocation |
-| **TOTAL** | **$[X]** | **Within $1-2M budget?** |
+Reason: Product, policy, and inventory data change frequently. RAG keeps answers grounded in current approved content. Fine-tuning can be revisited later for tone, classification, or repeated domain-specific tasks.
 
----
+### Real-Time APIs vs Batch Sync
 
-## Conclusion
+Recommended decision: Hybrid.
 
-[Summarize why this architecture will deliver a successful solution given the constraints and requirements.]
+Reason: Product catalog and policy documents can be synced and indexed. Inventory, cart, and order information may need real-time or near-real-time access.
+
+### Automation vs Human Escalation
+
+Recommended decision: Conservative escalation during MVP.
+
+Reason: Customer trust matters more than maximum automation at launch. Escalation can become more selective as accuracy improves.
+
+### Single LLM Provider vs Multi-Provider
+
+Recommended decision: Start with one enterprise-ready provider, design abstraction for future portability.
+
+Reason: Multi-provider support adds complexity. The architecture should avoid deep lock-in, but MVP should stay focused.
+
+## 9. Open Questions for Discovery
+
+Important discovery questions:
+
+- What is the quality and structure of the product catalog?
+- How often do prices, inventory, and policies change?
+- Which customer data fields are allowed in AI workflows?
+- What support categories create the highest ticket volume?
+- What questions must always be escalated?
+- What are the client's data residency requirements?
+- Which cloud platform and observability tools are already standard?
+- What is the current cost per support ticket?
+- What customer channels are in scope for MVP?
+
+## 10. Recommended First Release
+
+The first release should include:
+
+- Website assistant for product and support Q&A
+- Shopify product/catalog grounding
+- Zendesk escalation
+- Basic authenticated customer context where approved
+- Admin-configurable escalation rules
+- Monitoring dashboards
+- Conversation audit trails
+- Human review workflow for answer quality
+
+Returns, refunds, order tracking, additional channels, and advanced personalization should follow after the assistant is stable and measurable in production.

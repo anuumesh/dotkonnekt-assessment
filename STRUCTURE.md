@@ -1,92 +1,39 @@
-#  Complete File Structure Created
+# Repository Structure
 
-Here's everything that's been created for you:
+This repository is organized so candidates can understand the task quickly and reviewers can evaluate submissions consistently.
 
-```
-/tmp/dotkonnekt-assessment/
-│
-├── README.md
-│   └── Main landing page with overview, deliverables checklist, and FAQ
-│
-├── ASSESSMENT.md
-│   └── Detailed brief with scenario, requirements, evaluation criteria
-│
-├── RUBRIC.md
-│   └── Scoring rubric explaining how submissions will be evaluated
-│
-├── PUSH_TO_GITHUB.md
-│   └── Step-by-step instructions to push to your GitHub
-│
-└── resources/
-    └── templates/
-        ├── solution-proposal-template.md
-        │   └── 30-point template with detailed sections:
-        │       • Architecture overview
-        │       • Technology stack decisions
-        │       • Integration approach
-        │       • Scalability design
-        │       • Security & compliance
-        │       • Design tradeoffs
-        │
-        ├── delivery-plan-template.md
-        │   └── 30-point template covering:
-        │       • Discovery phase (week-by-week)
-        │       • MVP scope definition
-        │       • Production rollout approach
-        │       • Team structure & org chart
-        │       • Timeline with milestones
-        │       • Risks & dependencies
-        │       • Budget & resources
-        │
-        └── engineering-leadership-template.md
-            └── 30-point template including:
-                • Team structure & onboarding
-                • Engineering practices & standards
-                • CI/CD & deployment approach
-                • Testing & quality strategy
-                • Monitoring & operational readiness
-                • Continuous improvement
-                • Leadership approach & examples
+```text
+dotkonnekt-assessment/
+  README.md
+  ASSESSMENT.md
+  RUBRIC.md
+  STRUCTURE.md
+  PUSH_TO_GITHUB.md
+  resources/
+    templates/
+      solution-proposal-template.md
+      delivery-plan-template.md
+      engineering-leadership-template.md
+    examples/
+      sample-submission-outline.md
+  submissions/
+    candidate-name/
+      01-solution-proposal.md
+      02-delivery-plan.md
+      03-engineering-leadership.md
+      04-presentation-link.md
 ```
 
----
+## Candidate Files
 
-##  What You Have Now
+Candidates submit their work under `submissions/candidate-name/`. The folder name should use the candidate's actual name in lowercase kebab case, for example `submissions/ananya-rao/`.
 
- **Comprehensive Assessment Guide** - Human-readable, well-structured  
- **Ready-to-Share with Others** - Everything is public-ready  
- **Detailed Templates** - 3 full submission templates with guidance  
- **Evaluation Rubric** - Clear scoring criteria (30-30-30-10)  
- **Instructions** - Step-by-step guide to push to GitHub  
+## Resource Files
 
----
+The `resources/templates` folder contains detailed guidance for the three written deliverables. These files are not empty forms; they explain what a strong answer should cover and include concrete examples of the depth expected.
 
-##  Next: Push to GitHub
+Candidates may submit Markdown, PDF, or document links, as long as the reviewer can access the material without extra setup.
 
-### Run These Commands:
+## Reviewer Files
 
-```bash
-cd /tmp/dotkonnekt-assessment
-
-git init
-git config user.name "anuumesh"
-git config user.email "umeshy2009@gmail.com"
-git add .
-git commit -m "Initial commit: DotKonnekt Assessment templates and guide"
-git remote add origin https://github.com/anuumesh/dotkonnekt-assessment.git
-git branch -M main
-git push -u origin main
-```
-
-Then create the repo at: **https://github.com/new**
-
----
-
-## Share Your Assessment
-
-Once on GitHub, share:
-```
-https://github.com/anuumesh/dotkonnekt-assessment
-```
-
-Others can fork/clone and submit their responses via Pull Requests! 
+`RUBRIC.md` is the scoring guide. It should be used during review so different reviewers evaluate candidates against the same expectations.
