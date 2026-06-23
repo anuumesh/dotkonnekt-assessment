@@ -18,6 +18,8 @@ Recommended principles:
 Recommended duration: 3 weeks.
 
 | Week | Focus | Outputs |
+
+
 | --- | --- | --- |
 | Week 1 | Stakeholder interviews, system access, current support workflow review | Current-state map, integration inventory, initial risk register |
 | Week 2 | Data audit, AI feasibility tests, sample retrieval pipeline, security review | Data quality report, accuracy baseline, security constraints |
