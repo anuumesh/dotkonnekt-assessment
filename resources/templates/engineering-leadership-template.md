@@ -1,7 +1,3 @@
-# 03 - Engineering Leadership and Execution Guide
-
-This guide describes what a strong leadership and execution response should include. The focus is how the Delivery Head creates clarity, quality, and momentum.
-
 ## 1. Team Structure
 
 Recommended structure:
