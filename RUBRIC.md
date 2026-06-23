@@ -84,6 +84,7 @@ Weaker presentations usually:
 
 ## Overall Interpretation
 
+
 | Score | Interpretation |
 | ---: | --- |
 | 90-100 | Outstanding. Strong signal for senior delivery leadership. |
@@ -91,6 +92,7 @@ Weaker presentations usually:
 | 70-79 | Good. Worth continuing if experience also aligns. |
 | 60-69 | Mixed. Some useful thinking, but important gaps remain. |
 | Below 60 | Not yet at the expected level for this role. |
+
 
 ## What We Value Most
 
@@ -108,4 +110,4 @@ Weaker presentations usually:
 - Ignoring cost and latency
 - Treating integrations as simple API calls
 - Leaving monitoring, support, and rollback until the end
-- Submitting a generic AI architecture that could apply to any company
+- Submitting a generic AI architecture that could apply to any of the company
