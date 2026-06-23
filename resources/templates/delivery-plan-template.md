@@ -1,7 +1,3 @@
-# 02 - Delivery Plan Guide
-
-This guide describes the expected level of delivery planning. A strong response should feel like a plan that could be used to start an engagement.
-
 ## 1. Delivery Principles
 
 Recommended principles:
