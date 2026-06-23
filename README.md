@@ -2,7 +2,7 @@
 
 This repository contains the complete take-home assessment for the Delivery Head role at DotKonnekt.
 
-The exercise is designed to evaluate how a candidate thinks through a real enterprise AI delivery problem: architecture, delivery sequencing, team leadership, risk management, and executive communication.
+The exercise is designed to evaluate how a anyone thinks through a real enterprise AI delivery problem: architecture, delivery sequencing, team leadership, risk management, and executive communication.
 
 ## Candidate Scenario
 
