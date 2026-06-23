@@ -102,5 +102,3 @@ You may use these assumptions if you need a starting point:
 - Target availability: 99.9%
 - Initial channels: website chat and support handoff
 - Future channels: email, SMS, social, and voice
-
-You are free to challenge these assumptions if you explain why.
