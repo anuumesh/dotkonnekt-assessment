@@ -1,7 +1,3 @@
-# Sample Submission Outline
-
-This file shows the expected depth and structure of a strong submission. It is not a model answer to copy. It is a reference for how specific and practical the response should feel.
-
 ## 01 - Solution Proposal
 
 ### Executive Summary
