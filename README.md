@@ -1,6 +1,6 @@
 # DotKonnekt Delivery Head Assessment
 
-This repository contains the complete take-home assessment for the Delivery Head role at DotKonnekt. It is ready to share with candidates as-is.
+This repository contains the complete take-home assessment for the Delivery Head role at DotKonnekt.
 
 The exercise is designed to evaluate how a candidate thinks through a real enterprise AI delivery problem: architecture, delivery sequencing, team leadership, risk management, and executive communication.
 
@@ -18,17 +18,6 @@ The client environment includes:
 - AWS or GCP as the preferred cloud platform
 - Enterprise requirements for security, privacy, governance, auditability, and operational support
 
-## Candidate Deliverables
-
-Candidates should submit four files:
-
-```text
-submissions/candidate-name/
-  01-solution-proposal.md
-  02-delivery-plan.md
-  03-engineering-leadership.md
-  04-presentation-link.md
-```
 
 The submission is scored across four areas:
 
@@ -64,21 +53,3 @@ A strong response should:
 | `resources/templates/engineering-leadership-template.md` | Complete candidate guidance for leadership and execution |
 | `resources/examples/sample-submission-outline.md` | Example structure showing the expected depth and style |
 | `PUSH_TO_GITHUB.md` | Publishing checklist for repository owners |
-
-## Presentation Requirement
-
-Candidates must record a 15-minute executive walkthrough with camera and screen share enabled. The audience should be treated as:
-
-- CTO
-- VP of Customer Experience
-- Director of Engineering
-
-The presentation should summarize the recommended solution, the delivery approach, the main risks, and the decisions required from the client.
-
-## Use of AI Tools
-
-Candidates may use AI tools for outlining, research support, or language polishing. The final judgment, architecture choices, tradeoffs, and delivery recommendations must be their own. Candidates should be prepared to discuss and defend every major decision.
-
-## Contact
-
-Questions can be sent to `hr@dotkonnekt.com`.
